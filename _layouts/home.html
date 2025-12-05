@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
 </head>
 <body>
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.description }}</p>
-  <!-- 这里会渲染你在index.md中写的内容 -->
-  {{ content }}
+    <!-- 显示标题 -->
+    <h1>{{ page.title }}</h1>
+    <!-- 显示描述 -->
+    <p>{{ page.description }}</p>
+    <!-- 关键：渲染index.md里---下面的内容 -->
+    <div class="content">
+        {{ content }}
+    </div>
 </body>
 </html>
