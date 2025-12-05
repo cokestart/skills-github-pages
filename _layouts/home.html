@@ -99,10 +99,13 @@
         }
         /* 底部区域：分散排版+不叠放 */
         .bottom-bar {
-            display: flex;
-            justify-content: space-between; /* 左右分散 */
-            align-items: center;
-            padding: 20px 50px;
+           max-width: 800px; /* 限制底部最大宽度，和中间内容区对齐 */
+            margin: 0 auto; /* 让底部区域整体居中 */
+            display: grid; 
+            grid-template-columns: 1fr 1fr; /* 保持两列 */
+            justify-items: center; /* 每列内容居中 */
+            align-items: center; 
+            padding: 20px 0; /* 左右padding设为0，让内容更紧凑 */
             border-top: 1px solid #eee;
             background: #fdfdfd;
             color: #888;
