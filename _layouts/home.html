@@ -4,53 +4,82 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <style>
-        /* 完全还原你喜欢的上下布局 */
-        body {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            font-family: "微软雅黑", sans-serif;
-        }
-        /* 顶部标题+分割线（和你之前的一样） */
-        .header {
+        /* 保留红框的顶部区域 */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
             border-bottom: 1px solid #ccc;
+        }
+        /* 保留红框的底部区域 */
+        .bottom-bar {
             padding: 20px 0;
-            text-align: center;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        /* 中间文字：不挤也不松散，保持简洁 */
-        .content {
-            padding: 20px 0;
-            text-align: center; /* 文字居中，和标题对齐更整洁 */
-            font-size: 16px;
-            line-height: 1.4;
-        }
-        /* 底部信息（和你之前的一样） */
-        .footer {
             border-top: 1px solid #ccc;
-            padding: 20px 0;
             text-align: center;
             color: #888;
             font-size: 14px;
         }
+        /* 中间模块（保留第一个图的样式） */
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .module {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .module h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #2c3e50;
+        }
+        .tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            font-size: 14px;
+        }
+        /* 博客标题 */
+        .blog-title {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <!-- 顶部：还原你喜欢的标题+分割线 -->
-    <div class="header">
-        <h1>{{ page.title }}</h1>
+    <!-- 保留红框的顶部区域 -->
+    <div class="top-bar">
+        <span>skills-github-pages</span>
+        <span>我的博客首页</span>
     </div>
 
-    <!-- 中间：文字规整居中 -->
+    <!-- 博客标题 -->
+    <div class="blog-title">我的博客首页</div>
+
+    <!-- 保留第一个图的中间模块 -->
     <div class="content">
-        {{ content }}
+        <div class="module">
+            <h2>欢迎来到我的博客</h2>
+            <p>千万不要错过哟，有超多惊喜！！！</p>
+            <div>
+                <span class="tag">#哈哈哈哈</span>
+                <span class="tag">#来者是客</span>
+            </div>
+        </div>
+        <div class="module">
+            <h2>关于我</h2>
+            <p>一枚正在学习GitHub Pages的开发者，喜欢折腾博客排版~</p>
+        </div>
     </div>
 
-    <!-- 底部：还原原有信息 -->
-    <div class="footer">
+    <!-- 保留红框的底部区域 -->
+    <div class="bottom-bar">
+        <p>skills-github-pages</p>
         <p>skills-github-pages</p>
         <p>My clone repository</p>
     </div>
