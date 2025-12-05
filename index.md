@@ -1,7 +1,5 @@
 ---
-title: Welcome to my blog
-description: 这是我的博客
-###你好呀 ladies and gentlement
-##show time
+layout: home  # 固定值，告诉博客系统这是首页
+title: "我的博客首页"  # 首页标题
+discrption:'欢迎来探险哟 ladies and gentlement'
 ---
-
