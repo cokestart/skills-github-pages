@@ -4,52 +4,33 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <style>
-        /* 保留上下布局框架 */
+        /* 完全还原你喜欢的上下布局 */
         body {
             max-width: 800px;
             margin: 0 auto;
             padding: 0 20px;
             font-family: "微软雅黑", sans-serif;
-            color: #333;
         }
-        /* 顶部区域 */
+        /* 顶部标题+分割线（和你之前的一样） */
         .header {
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #ccc;
             padding: 20px 0;
             text-align: center;
         }
         .header h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 24px;
         }
-        /* 中间内容区域：分模块、不拥挤 */
+        /* 中间文字：不挤也不松散，保持简洁 */
         .content {
-            padding: 30px 0;
-            line-height: 1.6; /* 舒适行高，不挤 */
+            padding: 20px 0;
+            text-align: center; /* 文字居中，和标题对齐更整洁 */
+            font-size: 16px;
+            line-height: 1.4;
         }
-        /* 内容模块样式：加边框/背景，更规整 */
-        .module {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .module h2 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #2c3e50;
-        }
-        /* 标签样式：规整不杂乱 */
-        .tag {
-            background: #e9ecef;
-            padding: 4px 8px;
-            border-radius: 4px;
-            margin-right: 6px;
-            font-size: 14px;
-        }
-        /* 底部区域 */
+        /* 底部信息（和你之前的一样） */
         .footer {
-            border-top: 1px solid #eee;
+            border-top: 1px solid #ccc;
             padding: 20px 0;
             text-align: center;
             color: #888;
@@ -58,33 +39,19 @@
     </style>
 </head>
 <body>
-    <!-- 顶部：保留你的标题 -->
+    <!-- 顶部：还原你喜欢的标题+分割线 -->
     <div class="header">
         <h1>{{ page.title }}</h1>
     </div>
 
-    <!-- 中间：分模块的内容 -->
+    <!-- 中间：文字规整居中 -->
     <div class="content">
-        <!-- 欢迎模块 -->
-        <div class="module">
-            <h2>欢迎来到我的博客</h2>
-            <p>千万不要错过哟，有超多惊喜！！！</p>
-            <div>
-                <span class="tag">#哈哈哈哈</span>
-                <span class="tag">#来者是客</span>
-            </div>
-        </div>
-
-        <!-- 新增：关于我模块（可自定义内容） -->
-        <div class="module">
-            <h2>关于我</h2>
-            <p>一枚正在学习GitHub Pages的开发者，喜欢折腾博客排版~</p>
-        </div>
+        {{ content }}
     </div>
 
-    <!-- 底部：保留你的仓库信息 -->
+    <!-- 底部：还原原有信息 -->
     <div class="footer">
-        <p>{{ site.title }}</p>
+        <p>skills-github-pages</p>
         <p>My clone repository</p>
     </div>
 </body>
