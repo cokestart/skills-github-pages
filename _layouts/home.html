@@ -99,16 +99,16 @@
         }
         /* 底部区域：分散排版+不叠放 */
         .bottom-bar {
-           max-width: 800px; /* 限制底部最大宽度，和中间内容区对齐 */
-            margin: 0 auto; /* 让底部区域整体居中 */
-            display: grid; 
-            grid-template-columns: 1fr 1fr; /* 保持两列 */
-            justify-items: center; /* 每列内容居中 */
-            align-items: center; 
-            padding: 20px 0; /* 左右padding设为0，让内容更紧凑 */
-            border-top: 1px solid #eee;
-            background: #fdfdfd;
-            color: #888;
+            width: 100%; /* 让底部区域占满网页宽度（灰色线随之占满） */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px; /* 增大文字间距（数值越大间距越宽） */
+            padding: 15px 0;
+            border-top: 1px solid #ccc; /* 灰色线会随width:100%占满全屏 */
+            background: #fff;
+            color: #666;
             font-size: 14px;
         }
     </style>
