@@ -1,0 +1,5 @@
+<div class="tag-container">
+  {% for tag in include.tags | split: "," %}
+    <span class="tag">{{ tag }}</span>
+  {% endfor %}
+</div>
